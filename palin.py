@@ -1,4 +1,7 @@
-import sys
+'''
+PALIN - The Next Palindrome
+http://www.spoj.com/problems/PALIN/
+'''
 
 def calculate_palin(number):
 	new_number = number + 1 
@@ -25,13 +28,9 @@ def calculate_palin(number):
 		
 	return new_number
 
-conteudo = False
-cases = []
-max_value = 2
-for line in sys.stdin :
-        line = line.replace('\n','');
-        if conteudo :
-                case = line.split();
-                print(calculate_palin(int(case[0])))
-        conteudo = True
+
+qtd = int(input())
+for _ in range(qtd):
+    number = int(input().split()[0])
+    print(calculate_palin(number))
 
